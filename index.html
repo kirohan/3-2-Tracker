@@ -34,7 +34,7 @@
           <a class="btn btn-primary btn-lg" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel</a>
           <button class="btn btn-google btn-lg js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
         </div>
-        <p class="microcopy">Excel downloads instantly. Google tracking asks the student to choose their own Google account and creates a private copy in that Drive.</p>
+        <p class="microcopy">Excel downloads instantly. Track with Google opens Google's own copy screen, where each student signs in and saves a private copy to their own Drive.</p>
         <div class="chips" aria-label="Tracker highlights">
           <span>13 academic weeks</span><span>60% exam threshold</span><span>CT: 30 + 30</span><span>Extra classes supported</span>
         </div>
@@ -69,7 +69,7 @@
         <h2>How to use the tracker</h2>
       </div>
       <div class="steps">
-        <article><span>01</span><div><h3>Make your own copy</h3><p>Press <strong>Track</strong>. Sign in with Google if asked, then choose <strong>Make a copy</strong>. The file is added to your own Google Drive.</p></div></article>
+        <article><span>01</span><div><h3>Make your own copy</h3><p>Press <strong>Track with Google</strong>. Google will ask you to sign in or choose an account, then press <strong>Make a copy</strong>. Your personal tracker is saved to that Google Drive.</p></div></article>
         <article><span>02</span><div><h3>Choose your sessional slots</h3><p>On Dashboard, select your BECM 3204, BECM 3208 and CE 3224 slot, then choose the BECM 3200 odd/even-week cycle.</p></div></article>
         <article><span>03</span><div><h3>Tick each class</h3><p>Open <strong>Class Log</strong> and use the Attendance dropdown. Grey rows are inactive alternatives and are automatically ignored.</p></div></article>
         <article><span>04</span><div><h3>Record tests when they happen</h3><p>If a teacher takes a spot test, CT or quiz, choose the test type, teacher, score and total marks on the same class row.</p></div></article>
@@ -119,22 +119,8 @@
     </div>
   </footer>
 
-  <dialog id="googleSetupDialog">
-    <button class="dialog-close" type="button" aria-label="Close">×</button>
-    <p class="eyebrow">ONE-TIME OWNER SETUP</p>
-    <h2>Google tracking needs one public configuration value</h2>
-    <p>The Excel download already works. To let students create a private copy in their own Google Drive, configure either of these methods in <code>config.js</code>:</p>
-    <div class="setup-options">
-      <div><strong>Recommended — Google OAuth</strong><span>Paste a Google OAuth Web Client ID. The site asks each student to choose their Google account, then creates the tracker directly in that Drive using the limited <code>drive.file</code> permission.</span></div>
-      <div><strong>Alternative — Google Sheet template</strong><span>Paste a Viewer-only Google Sheet URL. Students are sent to Google's official <em>Make a copy</em> screen.</span></div>
-    </div>
-    <p class="privacy-note"><strong>Privacy:</strong> this website does not collect or store Gmail addresses, passwords, attendance data, or Drive contents.</p>
-    <a class="btn btn-primary" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel Instead</a>
-  </dialog>
-
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="./config.js"></script>
   <script src="./app.js"></script>
 </body>
