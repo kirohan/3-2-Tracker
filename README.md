@@ -1,77 +1,66 @@
-# BECM 2K22 — Attendance Tracker Website
+# BECM 2K22 — 3rd Year 2nd Term Attendance Tracker
 
-A GitHub Pages-ready companion website for the **BECM 2K22, 3rd Year, 2nd Term** attendance and class-test tracker.
+A GitHub Pages-ready attendance + CT tracker created specifically for **BECM 2K22, 3rd Year, 2nd Term**.
 
 **Creator:** K.I.Rohan  
-**Studio:** Bad Time Studio  
+**Website / Studio credit:** Bad Time Studio  
 **Copyright:** © 2026 K.I.Rohan
 
-## What is included
+## Student actions
 
-- `index.html` — landing page, tutorial, academic rules and Track buttons.
-- `style.css` — responsive design; no framework or build step.
-- `app.js` — Google Sheets copy-link logic.
-- `config.js` — one place to configure the Google Sheet template URL.
+The website intentionally keeps the two actions separate:
+
+- **Download Excel** → downloads the offline `.xlsx` tracker.
+- **Track with Google** → asks the student to choose their own Google/Gmail account and creates/opens a private tracker in that account.
+
+Google tracking never silently falls back to downloading Excel, so students always know which mode they are using.
+
+## Repository contents
+
+- `index.html` — responsive landing page + tutorial.
+- `style.css` — complete website styling.
+- `app.js` — Google account selection / Drive upload logic + template-copy fallback.
+- `config.js` — one-time owner configuration.
+- `GOOGLE_SETUP.md` — exact Google setup instructions.
 - `assets/BECM_2K22_3-2_Attendance_Tracker.xlsx` — Excel tracker.
-- `assets/dashboard-preview.png` — dashboard preview used on the website.
-- `LICENSE.md` — personal academic-use license / copyright notice.
+- `assets/dashboard-preview.png` — website dashboard preview.
+- `LICENSE.md` — copyright / use terms.
 
 ## Publish with GitHub Pages
 
-1. Create a new **public** repository, for example `becm-2k22-attendance-tracker`.
-2. Upload every file/folder from this repository bundle to the repository root.
-3. On GitHub open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select branch `main`, folder `/ (root)`, then Save.
-6. GitHub will show the live Pages URL after deployment.
+1. Upload every file/folder in this repository to your GitHub repository root.
+2. Open **GitHub → Repository → Settings → Pages**.
+3. Choose **Deploy from a branch**.
+4. Branch: `main`; folder: `/ (root)`.
+5. Save and wait for the Pages URL.
 
-No npm, build command or hosting server is required.
+There is no npm install, build command, database, or server.
 
-## Activate the **Track** button (Google / Gmail copy)
+## Enable Track with Google
 
-This is the recommended method because each visitor gets a separate copy in their own Google Drive without your site storing any student data.
+Read **`GOOGLE_SETUP.md`**.
 
-1. Upload `assets/BECM_2K22_3-2_Attendance_Tracker.xlsx` to Google Drive.
-2. Open it with **Google Sheets** and save/convert it as a Google Sheet.
-3. Confirm formulas, dropdowns and formatting after conversion.
-4. Click **Share → General access → Anyone with the link → Viewer**.
-5. Copy the Google Sheet URL. It will look like:
-   `https://docs.google.com/spreadsheets/d/SHEET_ID/edit?usp=sharing`
-6. Open `config.js` and paste the URL into:
-   ```js
-   googleSheetTemplateUrl: "PASTE_URL_HERE"
-   ```
-7. Commit the change.
+Recommended method: configure a Google OAuth Web Client ID and enable Drive API. The site then asks each student to select their own Google account and creates the tracker directly in that Drive using only the limited `drive.file` scope.
 
-The website automatically converts the template URL to Google's `/copy` route. When a student clicks **Track**, Google asks them to sign in if necessary and then shows **Make a copy**. The resulting tracker belongs to that student's Google account.
+Alternative method: put a Viewer-only Google Sheet template URL in `config.js`; the site sends students to Google's official **Make a copy** screen.
 
-> Keep the template itself Viewer-only. Students should work on their own copies, not the master.
+## Tracker logic
 
-## How students use the tracker
+- Exam attendance threshold: **60%**.
+- Theory: **3.00 credits → 3 routine classes/week**.
+- Sessional: **1.50 credits → one 3-hour class/week**.
+- BECM 3200: **0.75 credits → one 3-hour class every two weeks**.
+- Theory CT: **30 + 30 marks**, one 30-mark part per teacher.
+- Cancelled classes are excluded from attended/missed totals.
+- Extra / make-up classes count when marked Attended or Missed.
+- Spot tests / CT / quiz events can be logged against the class where they happened.
 
-1. Make a personal Google copy or download the Excel file.
-2. On **Dashboard**, select the three sessional slots and the BECM 3200 odd/even-week cycle.
-3. In **Class Log**, mark each class `Attended`, `Missed` or `Cancelled`.
-4. For a spot test / CT / quiz, fill Test Type, Test By, Score and Out Of.
-5. For an extra class, use the **EXTRA / MAKE-UP CLASS ENTRIES** section.
-6. For a new KUET closure, add the date in **Routine & Holidays**.
-7. Read attendance percentage, 60% eligibility, course progress, weekly progression and teacher-wise CT status from **Dashboard**.
+## Credits
 
-## Spreadsheet logic
+The creator credit is present in the website and workbook:
 
-- Minimum exam attendance: **60%**.
-- Theory courses: **3.00 credits**, 3 scheduled classes/week, 13 teaching weeks.
-- Sessional courses: **1.50 credits**, one 3-hour class/week.
-- BECM 3200: **0.75 credits**, one 3-hour class every two weeks.
-- Theory CT: **30 marks from each teacher's course part** (60 total across both teacher parts).
-- Cancelled classes do not count as attended or missed.
-- Extra classes count when marked Attended or Missed.
+**K.I.Rohan • Bad Time Studio**
 
-## Credits / copyright
+The workbook also includes creator credit on Dashboard, Class Log and Routine & Holidays.
 
-The visible creator credit is intentionally included in the website and workbook.
-
-**© 2026 K.I.Rohan • Bad Time Studio**  
-Created for BECM 2K22, 3rd Year, 2nd Term.
-
-See `LICENSE.md` before redistributing or adapting the project.
+See `LICENSE.md` before redistributing, selling, rebranding or adapting the project.
