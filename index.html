@@ -4,29 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="BECM 2K22 3rd Year 2nd Term attendance and class-test tracker by K.I.Rohan / Bad Time Studio." />
-  <meta name="theme-color" content="#180f3d" />
+  <meta name="theme-color" content="#163b6d" />
   <title>BECM 2K22 Attendance Tracker</title>
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="site-bg" aria-hidden="true">
-    <span class="bg-orb orb-1"></span>
-    <span class="bg-orb orb-2"></span>
-    <span class="bg-orb orb-3"></span>
-    <span class="grid-glow"></span>
-  </div>
-
+  <div class="page-accent" aria-hidden="true"></div>
   <div class="scroll-progress" id="scroll-progress"></div>
 
   <header class="nav-shell">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="BECM 2K22 Attendance Tracker home">
         <img class="brand-logo" src="./assets/logo.svg" alt="BECM 2K22 tracker logo" />
-        <span class="brand-text"><strong>BECM 2K22</strong><small>3rd Year • 2nd Term Tracker</small></span>
+        <span class="brand-text">
+          <strong>BECM 2K22</strong>
+          <small>3rd Year • 2nd Term Attendance Tracker</small>
+        </span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
@@ -35,216 +32,183 @@
 
       <div class="nav-panel" id="mobile-menu">
         <div class="nav-links">
+          <a href="#overview">Overview</a>
           <a href="#features">Features</a>
-          <a href="#tutorial">Tutorial</a>
-          <a href="#rules">Rules</a>
-          <a href="#faq">FAQ</a>
+          <a href="#tutorial">How to use</a>
+          <a href="#rules">Academic rules</a>
         </div>
         <div class="nav-actions">
           <a class="btn btn-secondary btn-sm" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel</a>
-          <button class="btn btn-google btn-sm js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
+          <button class="btn btn-primary btn-sm js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
         </div>
       </div>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero container">
+    <section class="hero container" id="overview">
       <div class="hero-copy reveal-up">
-        <p class="eyebrow">EXCLUSIVELY BUILT FOR BECM 2K22</p>
-        <h1>Track your semester with a <span>beautiful, batch-ready system.</span></h1>
-        <p class="lead">A clean attendance and CT tracker for <strong>BECM 2K22 • 3rd Year • 2nd Term</strong> — with attendance status, cancelled classes, extra classes, teacher-wise CT marks, and a live progress dashboard.</p>
+        <p class="eyebrow">BECM 2K22 • 3RD YEAR • 2ND TERM</p>
+        <h1>A clear academic tracker for attendance and class-test progress.</h1>
+        <p class="lead">Built specifically for this semester’s routine, attendance rules and course structure. Record each class as <strong>Attended</strong>, <strong>Missed</strong> or <strong>Cancelled</strong>, then monitor your progress from one dashboard.</p>
 
         <div class="hero-actions">
-          <button class="btn btn-primary btn-lg btn-glow js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
+          <button class="btn btn-primary btn-lg js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
           <a class="btn btn-secondary btn-lg" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel</a>
         </div>
 
-        <p class="microcopy">Google mode opens Google’s own <strong>Make a copy</strong> flow. Every student signs in with their own Google account and gets a personal copy in Drive.</p>
-
-        <div class="hero-metrics">
-          <div class="metric-card reveal-up delay-1">
-            <strong>Attended / Missed / Cancelled</strong>
-            <span>One simple attendance dropdown for every class.</span>
-          </div>
-          <div class="metric-card reveal-up delay-2">
-            <strong>60% Eligibility Rule</strong>
-            <span>Instant exam-status visibility from the live dashboard.</span>
-          </div>
-          <div class="metric-card reveal-up delay-3">
-            <strong>CT: 30 + 30</strong>
-            <span>Teacher-wise marks ready for your theory courses.</span>
-          </div>
+        <div class="hero-notes">
+          <span>60% minimum attendance threshold</span>
+          <span>Teacher-wise CT tracking</span>
+          <span>Extra &amp; make-up classes supported</span>
         </div>
+
+        <p class="microcopy">Google mode opens Google’s official “Make a copy” screen. Each student receives a private copy in their own Drive.</p>
       </div>
 
-      <div class="hero-visual reveal-up delay-2">
-        <div class="glass-window floating-card main-preview" aria-label="Dashboard preview">
-          <div class="window-topbar"><span></span><span></span><span></span><b>Live dashboard preview</b></div>
+      <div class="hero-preview reveal-up delay-1">
+        <div class="preview-card">
+          <div class="preview-header">
+            <div>
+              <span class="preview-label">LIVE DASHBOARD</span>
+              <strong>Semester Progress</strong>
+            </div>
+            <span class="status-pill">BECM 2K22</span>
+          </div>
           <img src="./assets/dashboard-preview.png" alt="BECM 2K22 attendance tracker dashboard preview" />
         </div>
-
-        <div class="floating-mini mini-card one">
-          <div class="mini-icon success">✓</div>
-          <div>
-            <strong>Quick marking</strong>
-            <span>Attended • Missed • Cancelled</span>
-          </div>
-        </div>
-
-        <div class="floating-mini mini-card two">
-          <div class="mini-icon purple">60%</div>
-          <div>
-            <strong>Exam threshold</strong>
-            <span>Always visible on the dashboard</span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="trust-strip container reveal-up">
-      <div>Built only for <strong>BECM 2K22</strong></div>
-      <div>Optimized for <strong>Google Sheets + Excel</strong></div>
-      <div>Designed by <strong>K.I.Rohan</strong></div>
-      <div>Powered by <strong>Bad Time Studio</strong></div>
+    <section class="summary-strip container reveal-up" aria-label="Tracker summary">
+      <article><strong>3 status options</strong><span>Attended • Missed • Cancelled</span></article>
+      <article><strong>13 teaching weeks</strong><span>Structured around the academic calendar</span></article>
+      <article><strong>30 + 30 CT marks</strong><span>Teacher-wise theory-course tracking</span></article>
+      <article><strong>Google + Excel</strong><span>Online and offline access</span></article>
     </section>
 
-    <section id="features" class="section">
+    <section id="features" class="section muted-section">
       <div class="container">
         <div class="section-head reveal-up">
-          <p class="eyebrow">MODERN, FOCUSED, AND PRACTICAL</p>
-          <h2>Everything the batch needs — nothing unnecessary.</h2>
-          <p>This is not a generic planner. It is a semester-specific system designed around the real BECM 2K22 routine and academic rules.</p>
+          <p class="eyebrow">CORE FEATURES</p>
+          <h2>Simple enough for daily use, complete enough for the whole semester.</h2>
+          <p>The tracker focuses only on the information BECM 2K22 students need to maintain consistently.</p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card reveal-up">
-            <div class="icon-wrap grad-blue">✓</div>
-            <h3>Clean attendance control</h3>
-            <p>For each class, simply choose <strong>Attended</strong>, <strong>Missed</strong>, or <strong>Cancelled</strong>. Blank rows remain unmarked until you update them.</p>
+            <span class="feature-index">01</span>
+            <h3>Class-by-class attendance</h3>
+            <p>Use one dropdown per class to select Attended, Missed or Cancelled. Unmarked rows remain neutral until you update them.</p>
           </article>
           <article class="feature-card reveal-up delay-1">
-            <div class="icon-wrap grad-purple">↗</div>
-            <h3>Smart dashboard</h3>
-            <p>Get course-wise attendance, attendance percentage, missed counts, CT progress, and how many more classes you can still miss.</p>
+            <span class="feature-index">02</span>
+            <h3>Course-wise dashboard</h3>
+            <p>Review attendance percentages, held classes, missed classes, eligibility status and remaining margin by course.</p>
           </article>
           <article class="feature-card reveal-up delay-2">
-            <div class="icon-wrap grad-pink">＋</div>
-            <h3>Extra / make-up classes</h3>
-            <p>Extra classes are tracked separately but still influence the final attendance result correctly.</p>
+            <span class="feature-index">03</span>
+            <h3>Extra and make-up classes</h3>
+            <p>Record additional classes without affecting the regular routine structure. They are included in the final attendance calculation.</p>
           </article>
           <article class="feature-card reveal-up">
-            <div class="icon-wrap grad-teal">30</div>
-            <h3>Teacher-wise CT system</h3>
-            <p>Spot tests, quizzes and CT marks are logged beside the class row, while the dashboard summarizes final teacher-part scores.</p>
+            <span class="feature-index">04</span>
+            <h3>Spot test and CT records</h3>
+            <p>Log quiz, spot-test and CT information beside the class where it occurred, then summarize teacher-wise performance.</p>
           </article>
           <article class="feature-card reveal-up delay-1">
-            <div class="icon-wrap grad-orange">60</div>
-            <h3>Eligibility-aware</h3>
-            <p>The tracker uses the <strong>60% minimum attendance</strong> rule and highlights whether you are currently safe for the exam.</p>
+            <span class="feature-index">05</span>
+            <h3>60% eligibility tracking</h3>
+            <p>The dashboard uses the 60% attendance requirement and shows whether the current record is above or below the threshold.</p>
           </article>
           <article class="feature-card reveal-up delay-2">
-            <div class="icon-wrap grad-mix">13</div>
-            <h3>Semester timeline ready</h3>
-            <p>The sheet is aligned to the academic teaching weeks and routine logic of this semester.</p>
+            <span class="feature-index">06</span>
+            <h3>Holiday-aware schedule</h3>
+            <p>Academic closures can be recorded so scheduled classes on those dates do not distort the attendance statistics.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section showcase-section">
-      <div class="container showcase-grid">
-        <div class="showcase-copy reveal-up">
-          <p class="eyebrow">WHY IT FEELS DIFFERENT</p>
-          <h2>Designed like a product, not just a file.</h2>
-          <p>From the hero section to the glass cards and gradient interface, this site now presents your tracker as a polished tool. The goal is simple: make students trust it, understand it fast, and start using it immediately.</p>
-          <ul class="accent-list">
-            <li>Modern gradient-first visual language</li>
-            <li>Animated sections that reveal smoothly</li>
-            <li>Responsive layout for desktop and mobile</li>
-            <li>Custom logo and favicon for a stronger identity</li>
-          </ul>
-        </div>
-        <div class="showcase-panel reveal-up delay-2">
-          <div class="glass-window tilt-card">
-            <div class="stats-grid">
-              <div><strong>3 Sheets</strong><span>Dashboard, Log, Settings</span></div>
-              <div><strong>1 Click</strong><span>Google copy flow</span></div>
-              <div><strong>3 States</strong><span>Attended / Missed / Cancelled</span></div>
-              <div><strong>0 Clutter</strong><span>Only what matters</span></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <section id="tutorial" class="section container">
       <div class="section-head left reveal-up">
-        <p class="eyebrow">FAST ONBOARDING</p>
-        <h2>How students should use it</h2>
+        <p class="eyebrow">HOW TO USE</p>
+        <h2>A practical workflow for the semester.</h2>
       </div>
 
-      <div class="steps modern-steps">
-        <article class="step-card reveal-up"><span>01</span><div><h3>Click Track with Google</h3><p>Google asks the student to choose or sign into their account, then opens the official <strong>Make a copy</strong> screen.</p></div></article>
-        <article class="step-card reveal-up delay-1"><span>02</span><div><h3>Create the personal copy</h3><p>The tracker is copied to the student’s own Google Drive, so their data stays private and independent.</p></div></article>
-        <article class="step-card reveal-up delay-2"><span>03</span><div><h3>Select sessional options</h3><p>From the dashboard or settings area, choose the relevant sessional slots and BECM 3200 cycle.</p></div></article>
-        <article class="step-card reveal-up"><span>04</span><div><h3>Mark each class quickly</h3><p>Use one dropdown only: <strong>Attended</strong>, <strong>Missed</strong>, or <strong>Cancelled</strong>.</p></div></article>
-        <article class="step-card reveal-up delay-1"><span>05</span><div><h3>Record tests when needed</h3><p>If a teacher takes a quiz, spot test or CT, log it beside that class entry and let the dashboard summarize it.</p></div></article>
-        <article class="step-card reveal-up delay-2"><span>06</span><div><h3>Watch the dashboard update</h3><p>The dashboard shows your running attendance, eligibility, CT status and progress over the semester.</p></div></article>
+      <div class="timeline">
+        <article class="timeline-item reveal-up">
+          <div class="timeline-number">1</div>
+          <div><h3>Create your personal copy</h3><p>Click <strong>Track with Google</strong> and use Google’s own copy screen, or download the Excel file for offline use.</p></div>
+        </article>
+        <article class="timeline-item reveal-up delay-1">
+          <div class="timeline-number">2</div>
+          <div><h3>Set sessional options</h3><p>Select the relevant sessional slots and the BECM 3200 odd/even-week cycle for your routine.</p></div>
+        </article>
+        <article class="timeline-item reveal-up delay-2">
+          <div class="timeline-number">3</div>
+          <div><h3>Update after each class</h3><p>Mark the class as Attended, Missed or Cancelled. This is the only regular action required.</p></div>
+        </article>
+        <article class="timeline-item reveal-up">
+          <div class="timeline-number">4</div>
+          <div><h3>Record tests when needed</h3><p>If a teacher takes a spot test, quiz or CT, enter the details on the corresponding class row.</p></div>
+        </article>
+        <article class="timeline-item reveal-up delay-1">
+          <div class="timeline-number">5</div>
+          <div><h3>Check the dashboard</h3><p>Use the dashboard to monitor course percentages, eligibility status and teacher-wise CT progress.</p></div>
+        </article>
       </div>
     </section>
 
-    <section id="rules" class="section dark-section">
+    <section id="rules" class="section rules-section">
       <div class="container rule-layout">
-        <div class="reveal-up">
-          <p class="eyebrow light-eyebrow">ACADEMIC LOGIC INSIDE</p>
-          <h2>Built around the real semester structure.</h2>
-          <p class="dark-lead">The tracker reflects the rules and class structure you described for BECM 2K22, 3rd Year, 2nd Term.</p>
+        <div class="rule-copy reveal-up">
+          <p class="eyebrow light-eyebrow">ACADEMIC STRUCTURE</p>
+          <h2>Configured around the rules supplied for this term.</h2>
+          <p>The workbook is intentionally limited to the structure of BECM 2K22, 3rd Year, 2nd Term.</p>
         </div>
         <div class="rule-grid">
-          <div class="reveal-up"><strong>3.00</strong><span>Theory credit → 3 classes per week</span></div>
-          <div class="reveal-up delay-1"><strong>1.50</strong><span>Sessional → one 3-hour class weekly</span></div>
-          <div class="reveal-up delay-2"><strong>0.75</strong><span>BECM 3200 → one 3-hour class in two weeks</span></div>
-          <div class="reveal-up"><strong>60%</strong><span>Minimum attendance for exam seat</span></div>
-          <div class="reveal-up delay-1"><strong>30 + 30</strong><span>Teacher-wise CT parts for theory courses</span></div>
-          <div class="reveal-up delay-2"><strong>13</strong><span>Tracked academic teaching weeks</span></div>
+          <div class="reveal-up"><strong>3.00</strong><span>Theory course → 3 classes per week</span></div>
+          <div class="reveal-up delay-1"><strong>1.50</strong><span>Sessional course → one 3-hour class weekly</span></div>
+          <div class="reveal-up delay-2"><strong>0.75</strong><span>BECM 3200 → one 3-hour class every two weeks</span></div>
+          <div class="reveal-up"><strong>60%</strong><span>Minimum attendance required for exam eligibility</span></div>
+          <div class="reveal-up delay-1"><strong>30 + 30</strong><span>CT marks across two teacher course parts</span></div>
+          <div class="reveal-up delay-2"><strong>13</strong><span>Academic teaching weeks tracked</span></div>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section container">
-      <div class="section-head left reveal-up">
-        <p class="eyebrow">HELPFUL ANSWERS</p>
-        <h2>Frequently asked questions</h2>
-      </div>
-      <div class="faq reveal-up">
-        <details open>
-          <summary>Does the Google button download the Excel file?</summary>
-          <p>No. <strong>Download Excel</strong> downloads the spreadsheet. <strong>Track with Google</strong> opens Google’s copy flow for the online version.</p>
-        </details>
-        <details>
-          <summary>Will cancelled classes hurt attendance?</summary>
-          <p>No. Cancelled classes are not treated as held classes, so they do not reduce the attendance percentage.</p>
-        </details>
-        <details>
-          <summary>Can I still use the tracker offline?</summary>
-          <p>Yes. Students who prefer offline usage can download and use the Excel version separately.</p>
-        </details>
-        <details>
-          <summary>Is my Google account data stored by the website?</summary>
-          <p>No. The website simply redirects to Google’s own copy screen. It does not store passwords, Gmail addresses, attendance logs, or CT marks.</p>
-        </details>
+    <section class="section container">
+      <div class="faq-card reveal-up">
+        <div class="section-head left compact">
+          <p class="eyebrow">QUICK NOTES</p>
+          <h2>Common questions</h2>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>Will a cancelled class reduce attendance?</summary>
+            <p>No. Cancelled classes are excluded from the number of held classes.</p>
+          </details>
+          <details>
+            <summary>Does the Google button download Excel?</summary>
+            <p>No. Track with Google opens the online copy workflow. Download Excel remains a separate option.</p>
+          </details>
+          <details>
+            <summary>Can the tracker be used on phone and laptop?</summary>
+            <p>Yes. Google Sheets is suitable for multi-device use, while Excel is available for offline access.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section class="section container callout reveal-up">
+    <section class="section container final-cta reveal-up">
       <div>
-        <p class="eyebrow">READY TO USE</p>
-        <h2>One smart tracker for the whole batch.</h2>
-        <p>Beautiful on the outside, practical on the inside — exactly the kind of tool students will actually use.</p>
+        <p class="eyebrow">START TRACKING</p>
+        <h2>Keep one reliable record for the entire term.</h2>
+        <p>Update it after class, check the dashboard when needed, and let the calculations handle the rest.</p>
       </div>
       <div class="callout-actions">
-        <button class="btn btn-primary btn-lg btn-glow js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
+        <button class="btn btn-primary btn-lg js-google-track" type="button"><span class="google-dot" aria-hidden="true">G</span>Track with Google</button>
         <a class="btn btn-secondary btn-lg" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel</a>
       </div>
     </section>
@@ -254,10 +218,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="./assets/logo.svg" alt="BECM 2K22 tracker logo" />
-        <div>
-          <strong>BECM 2K22 Attendance Tracker</strong>
-          <span>3rd Year • 2nd Term</span>
-        </div>
+        <div><strong>BECM 2K22 Attendance Tracker</strong><span>3rd Year • 2nd Term</span></div>
       </div>
       <div class="credit">Designed &amp; developed by <strong>K.I.Rohan</strong> • <strong>Bad Time Studio</strong><br><small>© 2026. Personal academic use only. Keep creator credit intact.</small></div>
     </div>
