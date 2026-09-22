@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BECM 2K22 3rd Year 2nd Term attendance and class-test tracker by K.I.Rohan / Bad Time Studio." />
+  <meta name="theme-color" content="#0f2747" />
+  <title>BECM 2K22 Attendance Tracker</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav-shell">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="BECM 2K22 Attendance Tracker home">
+        <span class="brand-mark">22</span>
+        <span><strong>BECM 2K22</strong><small>3rd Year • 2nd Term</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#tutorial">Tutorial</a>
+        <a href="#rules">Rules</a>
+      </div>
+      <button class="btn btn-primary js-track" type="button">Track</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">BUILT ONLY FOR BECM 2K22</p>
+        <h1>Your semester, <span>one clean tracker.</span></h1>
+        <p class="lead">Attendance, cancelled classes, extra classes, spot tests and teacher-wise CT progress — designed around the actual 3rd Year 2nd Term routine.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg js-track" type="button">Track with Google</button>
+          <a class="btn btn-secondary btn-lg" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel</a>
+        </div>
+        <p class="microcopy">Google tracking uses a personal copy in the student's own Drive. Excel works offline.</p>
+        <div class="chips" aria-label="Tracker highlights">
+          <span>13 academic weeks</span><span>60% exam threshold</span><span>CT: 30 + 30</span><span>Extra classes supported</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Dashboard preview">
+        <div class="preview-toolbar"><span></span><span></span><span></span><b>Live semester dashboard</b></div>
+        <img src="./assets/dashboard-preview.png" alt="BECM 2K22 attendance tracker dashboard preview" />
+      </div>
+    </section>
+
+    <section id="features" class="section soft-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">SIMPLE BY DESIGN</p>
+          <h2>Only what this batch actually needs.</h2>
+          <p>No generic student planner clutter. The tracker is prebuilt for the BECM 2K22, 3rd Year 2nd Term schedule.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="icon">✓</div><h3>Daily attendance tick</h3><p>Mark Attended, Missed or Cancelled after each class. Inactive alternate lab slots stay out of the statistics.</p></article>
+          <article class="feature"><div class="icon">↗</div><h3>Progress dashboard</h3><p>See course-wise attendance, exam eligibility, how many classes you can still miss, and your 13-week trend.</p></article>
+          <article class="feature"><div class="icon">＋</div><h3>Extra / make-up classes</h3><p>Log extra classes separately without disturbing the regular routine. They automatically join the final percentage.</p></article>
+          <article class="feature"><div class="icon">30</div><h3>Teacher-wise CT</h3><p>Track spot tests and final CT marks for each teacher's course part — 30 marks per teacher for theory courses.</p></article>
+          <article class="feature"><div class="icon">60</div><h3>Exam threshold</h3><p>The dashboard uses the 60% minimum attendance rule and shows a clear eligible / below-threshold status.</p></article>
+          <article class="feature"><div class="icon">⌁</div><h3>Holiday aware</h3><p>Durga Puja is already included. Add a new university closure date once and matching routine classes are ignored.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tutorial" class="section container">
+      <div class="section-head left">
+        <p class="eyebrow">2-MINUTE SETUP</p>
+        <h2>How to use the tracker</h2>
+      </div>
+      <div class="steps">
+        <article><span>01</span><div><h3>Make your own copy</h3><p>Press <strong>Track</strong>. Sign in with Google if asked, then choose <strong>Make a copy</strong>. The file is added to your own Google Drive.</p></div></article>
+        <article><span>02</span><div><h3>Choose your sessional slots</h3><p>On Dashboard, select your BECM 3204, BECM 3208 and CE 3224 slot, then choose the BECM 3200 odd/even-week cycle.</p></div></article>
+        <article><span>03</span><div><h3>Tick each class</h3><p>Open <strong>Class Log</strong> and use the Attendance dropdown. Grey rows are inactive alternatives and are automatically ignored.</p></div></article>
+        <article><span>04</span><div><h3>Record tests when they happen</h3><p>If a teacher takes a spot test, CT or quiz, choose the test type, teacher, score and total marks on the same class row.</p></div></article>
+        <article><span>05</span><div><h3>Log cancelled and extra classes</h3><p>Cancelled regular class: choose Cancelled. Extra class: use the dedicated Extra / Make-up section at the bottom of Class Log.</p></div></article>
+        <article><span>06</span><div><h3>Watch the dashboard</h3><p>Your course percentages, 60% eligibility status, CT progress and weekly attendance progression update automatically.</p></div></article>
+      </div>
+
+      <div class="tips">
+        <details open><summary>What if KUET declares another holiday?</summary><p>Open <strong>Routine & Holidays</strong>, add the closure date and reason in the yellow override area. Scheduled routine rows on that date become inactive.</p></details>
+        <details><summary>What if a teacher takes more than one spot test?</summary><p>Record each one on the class where it happened. The Dashboard counts the tests and totals the raw marks teacher-wise. Enter the teacher's final CT mark out of 30 when finalized.</p></details>
+        <details><summary>Can I use Excel instead of Google Sheets?</summary><p>Yes. Download the Excel version and use it offline. The Google version is mainly for convenient access across phone and laptop.</p></details>
+      </div>
+    </section>
+
+    <section id="rules" class="section dark-section">
+      <div class="container rule-layout">
+        <div>
+          <p class="eyebrow light-eyebrow">ACADEMIC LOGIC BUILT IN</p>
+          <h2>Designed around your semester rules.</h2>
+          <p class="dark-lead">The sheet is not a generic template; its calculations follow the structure supplied for BECM 2K22.</p>
+        </div>
+        <div class="rule-grid">
+          <div><strong>3.00</strong><span>Theory credit → 3 routine classes per week</span></div>
+          <div><strong>1.50</strong><span>Sessional → one 3-hour class per week</span></div>
+          <div><strong>0.75</strong><span>BECM 3200 → one 3-hour class every two weeks</span></div>
+          <div><strong>60%</strong><span>Minimum attendance for exam eligibility</span></div>
+          <div><strong>30 + 30</strong><span>CT marks across the two teacher parts of a theory course</span></div>
+          <div><strong>13</strong><span>Academic teaching weeks tracked</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container callout">
+      <div>
+        <p class="eyebrow">READY?</p>
+        <h2>Stop calculating attendance in your head.</h2>
+        <p>Make your personal copy and update it after class. That is all the tracker needs.</p>
+      </div>
+      <button class="btn btn-primary btn-lg js-track" type="button">Start Tracking</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><strong>BECM 2K22 Attendance Tracker</strong><span>3rd Year • 2nd Term</span></div>
+      <div class="credit">Designed &amp; developed by <strong>K.I.Rohan</strong> • <strong>Bad Time Studio</strong><br><small>© 2026. Personal academic use only. Keep creator credit intact.</small></div>
+    </div>
+  </footer>
+
+  <dialog id="setupDialog">
+    <button class="dialog-close" type="button" aria-label="Close">×</button>
+    <p class="eyebrow">OWNER SETUP REQUIRED ONCE</p>
+    <h2>Connect the Google Sheet template</h2>
+    <p>This website is ready for one-click copies, but the public Google Sheet template URL has not been added yet.</p>
+    <ol>
+      <li>Upload the Excel tracker to Google Drive and open it as Google Sheets.</li>
+      <li>Share the sheet as <strong>Anyone with the link → Viewer</strong>.</li>
+      <li>Paste that sheet URL into <code>config.js</code>.</li>
+    </ol>
+    <p>After that, every Track button sends visitors to Google's <strong>Make a copy</strong> screen and saves the copy in their own Drive.</p>
+    <a class="btn btn-primary" href="./assets/BECM_2K22_3-2_Attendance_Tracker.xlsx" download>Download Excel Now</a>
+  </dialog>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
