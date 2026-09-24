@@ -1,3 +1,5 @@
+> Routine note: this package includes the revised class routine effective Sunday, 27 September 2026.
+
 # Update your existing GitHub repository
 
 1. Extract this ZIP.

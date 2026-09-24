@@ -45,3 +45,7 @@ To change the downloadable workbook, replace:
 ## Copyright
 
 © 2026 K.I.Rohan • Bad Time Studio. Personal academic use only. Keep creator credit intact.
+
+## Routine revision
+
+The workbook bundled in this repository has been updated for the official routine effective **Sunday, 27 September 2026**. Weeks 1–3 remain unchanged; the revised routine applies from Week 4 onward.
